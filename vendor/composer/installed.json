@@ -1705,5 +1705,112 @@
             }
         ],
         "description": "This bundle generates code for you"
+    },
+    {
+        "name": "kriswallsmith/buzz",
+        "version": "v0.13",
+        "version_normalized": "0.13.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kriswallsmith/Buzz.git",
+            "reference": "487760b05d6269a4c2c374364325326cfa65b12c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kriswallsmith/Buzz/zipball/487760b05d6269a4c2c374364325326cfa65b12c",
+            "reference": "487760b05d6269a4c2c374364325326cfa65b12c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*"
+        },
+        "suggest": {
+            "ext-curl": "*"
+        },
+        "time": "2014-09-15 12:42:36",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Buzz": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kris Wallsmith",
+                "email": "kris.wallsmith@gmail.com",
+                "homepage": "http://kriswallsmith.net/"
+            }
+        ],
+        "description": "Lightweight HTTP client",
+        "homepage": "https://github.com/kriswallsmith/Buzz",
+        "keywords": [
+            "curl",
+            "http client"
+        ]
+    },
+    {
+        "name": "ahmedsamy/hype-mailchimp-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Hype/MailchimpBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/AhmedSamy/HypeMailchimpBundle.git",
+            "reference": "bdac971002df58490ef40700c4a5ed7a8974f984"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/AhmedSamy/HypeMailchimpBundle/zipball/bdac971002df58490ef40700c4a5ed7a8974f984",
+            "reference": "bdac971002df58490ef40700c4a5ed7a8974f984",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "kriswallsmith/buzz": ">=0.7",
+            "php": ">=5.3.2",
+            "symfony/framework-bundle": "2.*"
+        },
+        "time": "2015-01-10 09:53:52",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Hype\\MailchimpBundle": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ahmed Samy",
+                "email": "ahmed.samy.cs@gmail.com",
+                "homepage": "http://www.ahmed-samy.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Mailchimp V2.0 API Object Oriented wrapper",
+        "homepage": "https://github.com/AhmedSamy/hype-mailchimp-api-2.0",
+        "keywords": [
+            "api",
+            "curl",
+            "http client",
+            "mailchimp",
+            "newsletter"
+        ]
     }
 ]

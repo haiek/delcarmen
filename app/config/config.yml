@@ -14,7 +14,7 @@ framework:
     csrf_protection: ~
     validation:      { enable_annotations: true }
     templating:
-        engines: ['twig']
+        engines: ['twig', 'php']
         #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_hosts:   ~
@@ -80,3 +80,8 @@ swiftmailer:
     host:       smtp.gmail.com
     username:   comyasejuega@gmail.com
     password:   martinyagus
+
+hype_mailchimp:
+    api_key: a48c235e7acc140d924c714fb50dacf1-us10
+    default_list: a46c470bcf
+    ssl: true #optional configuring curl connection    
