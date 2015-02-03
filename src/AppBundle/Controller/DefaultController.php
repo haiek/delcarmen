@@ -12,38 +12,7 @@ class DefaultController extends Controller
      * @Route("/app/example", name="homepage")
      */
     public function indexAction()
-    {
-    	
-/*
-    //	CREAR CAMPAÑA
-
-    	$mc = $this->get('hype_mailchimp');
-        $data = $mc->getCampaign()->create('regular', array(
-            'list_id' => 'a46c470bcf',
-            'subject' => 'test created subject',
-            'from_email' => 'comyasejuega@gmail.com',
-            'from_name' => 'Del Carmen',
-            'to_name' => 'fans'
-                ), array(
-            'html' => '<h5>Prueba de mailchimp</h5>',
-            'sections' => array(),
-            'text' => '<b>test</b>',
-            'url' => 'http://www.salondelcarmen.com.ar',
-            'archive' => 'test'
-        ));
-        var_dump($data);
-        
-
-        ENVIAR CAMPAÑA
- */
-        $mc = $this->get('hype_mailchimp');
- 	    $data = $mc->getCampaign()
-                ->setCi('57beb7e2be')
-                ->send();
-
-        var_dump($data);
-
-die;
+    {    	
         return $this->render('default/index.html.twig');
     }
 
@@ -143,6 +112,14 @@ die;
                 ->send();
 
                 echo $cid;die;
+    }
+
+    /**
+     * @Route("/miembros/elegir", name="choose_list")
+     */
+    public function chooseList()
+    {
+        return $this->render('AppBundle:Default:elegir-lista.html.php');
     }
 
 }
