@@ -642,7 +642,7 @@
 
 	#header-wrapper
 	{
-		background: url('../images/banner.jpg') center center;
+		background: url('../images/header.jpg') center center;
 		background-size: cover;
 	}
 	
@@ -662,6 +662,7 @@
 		background: #282b34 url('images/overlay.png');
 		color: #eee;
 		color: rgba(255,255,255,0.5);
+		padding-bottom: 0px;
 	}
 
 		#footer-wrapper h1,
@@ -792,6 +793,11 @@
 			color: rgba(255,255,255,0.5);
 			text-transform: uppercase;
 		}
+		#logo img
+		{
+			height: 300px;
+			margin-top: -10%;
+		}
 
 /*********************************************************************************/
 /* Intro                                                                         */
@@ -868,3 +874,10 @@
 			{
 				color: #fff;
 			}
+
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}

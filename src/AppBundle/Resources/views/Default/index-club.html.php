@@ -17,11 +17,41 @@
 		<script src="/web/bundles/app/club/js/skel-layers.min.js"></script>
 		<script src="/web/bundles/app/club/js/init.js"></script>
 		<noscript>
-			<link rel="stylesheet" href="/asd/bundles/app/club/css/skel.css" />
-			<link rel="stylesheet" href="/asd/bundles/app/club/css/style.css" />
-			<link rel="stylesheet" href="/asd/bundles/app/club/css/style-desktop.css" />
+			<link rel="stylesheet" href="/web/bundles/app/club/css/skel.css" />
+			<link rel="stylesheet" href="/web/bundles/app/club/css/style.css" />
+			<link rel="stylesheet" href="/web/bundles/app/club/css/style-desktop.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+	    <!-- Owl Carousel Assets -->
+	    <script src="/web/bundles/app/club/owl-carousel/owl.carousel.js"></script>
+    	<link href="/web/bundles/app/club/owl-carousel/owl.carousel.css" rel="stylesheet">
+    	<link href="/web/bundles/app/club/owl-carousel/owl.theme.css" rel="stylesheet">
+
+		<script>
+			$(document).ready(function() {
+ 
+			  $("#owl-demo").owlCarousel({
+			 
+			      navigation : true, // Show next and prev buttons
+			      slideSpeed : 300,
+			      paginationSpeed : 400,
+			      singleItem:true
+			 
+			      // "singleItem:true" is a shortcut for:
+			      // items : 1, 
+			      // itemsDesktop : false,
+			      // itemsDesktopSmall : false,
+			      // itemsTablet: false,
+			      // itemsMobile : false
+			 
+			  });
+
+			  $(".owl-buttons").hide();
+			 
+			});
+		</script>
+
 	</head>
 	<body class="homepage">
 
@@ -31,8 +61,11 @@
 					
 					<!-- Logo -->
 						<div id="logo">
+							<img src="/web/bundles/app/club/images/logo.png" alt="" />
+							<!--
 							<h1><a href="index.html">Escape Velocity</a></h1>
 							<p>A free responsive site template by HTML5 UP</p>
+							-->
 						</div>
 					
 					<!-- Nav -->
@@ -69,31 +102,35 @@
 		
 		<!-- Intro -->
 			<div id="intro-wrapper" class="wrapper style1">
-				<div class="title">The Introduction</div>
+				<div class="title">Del Carmen Casa Club</div>
 				<section id="intro" class="container">
 					<p class="style1">So in case you were wondering what this is all about ...</p>
 					<p class="style2">
 						Escape Velocity is a free responsive<br class="mobile-hide" />
 						site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
 					</p>
-					<p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
-					free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
-					your personal or commercial projects &ndash; just be sure to credit us!</p>
+					<p class="style3">
+						Una <strong>casa</strong> de otro tiempo con música de otro tiempo. Un <strong>museo</strong>, una <strong>galería</strong> de arte. Un lugar para estar entre <strong>amigos</strong>. Una carta simple, <strong>brebajes</strong> clásicos.
+					</p>
 					<ul class="actions">
-						<li><a href="#" class="button style3 big">Proceed</a></li>
+						<li><a href="#servicios" class="button style3 big">Saber más</a></li>
 					</ul>
 				</section>
 			</div>
 		
 		<!-- Main -->
-			<div class="wrapper style2">
-				<div class="title">The Details</div>
+			<div class="wrapper style2" id="servicios">
+				<div class="title">Servicios</div>
 				<div id="main" class="container">
-					
-					<!-- Image -->
-						<a href="#" class="image featured">
-							<img src="/web/bundles/app/club/images/pic01.jpg" alt="" />
-						</a>
+
+					<!-- OWL Carousel -->
+					<div id="owl-demo" class="owl-carousel owl-theme">
+ 
+					  <div class="item"><img src="/web/bundles/app/club/images/banner1.jpg" alt="The Last of us"></div>
+					  <div class="item"><img src="/web/bundles/app/club/images/banner2.jpg" alt="GTA V"></div>
+					  <div class="item"><img src="/web/bundles/app/club/images/banner3.jpg" alt="Mirror Edge"></div>
+					 
+					</div>
 					
 					<!-- Features -->
 						<section id="features">
@@ -105,27 +142,13 @@
 								<div class="row">
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-comment">Mattis velit diam vulputate</h3>
+											<h3 class="icon fa-comment">Live Shows</h3>
 											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 										</section>
 									</div>
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-refresh">Lorem ipsum dolor sit veroeros</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-										</section>
-									</div>
-								</div>
-								<div class="row">
-									<div class="6u">
-										<section>
-											<h3 class="icon fa-picture-o">Pretium phasellus justo lorem</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-										</section>
-									</div>
-									<div class="6u">
-										<section>
-											<h3 class="icon fa-cog">Tempus sed pretium orci</h3>
+											<h3 class="icon fa-refresh">Tapas & Cocktails</h3>
 											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 										</section>
 									</div>
@@ -133,13 +156,13 @@
 								<div class="row">
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-wrench">Aliquam consequat et feugiat</h3>
+											<h3 class="icon fa-picture-o">Summer Party</h3>
 											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 										</section>
 									</div>
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-check">Dolore laoreet aliquam mattis</h3>
+											<h3 class="icon fa-cog">One Day Gallery</h3>
 											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 										</section>
 									</div>
@@ -156,7 +179,7 @@
 		
 		<!-- Highlights -->
 			<div class="wrapper style3">
-				<div class="title">The Endorsements</div>
+				<div class="title">Próximos Eventos</div>
 				<div id="highlights" class="container">
 					<div class="row 150%">
 						<div class="4u">
@@ -195,7 +218,7 @@
 
 		<!-- Footer -->
 			<div id="footer-wrapper" class="wrapper">
-				<div class="title">The Rest Of It</div>
+				<div class="title">Contacto</div>
 				<div id="footer" class="container">
 					<header class="style1">
 						<h2>Ipsum sapien elementum portitor?</h2>
