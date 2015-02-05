@@ -9,11 +9,19 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/app/example", name="homepage")
+     * @Route("/", name="index_salon")
      */
     public function indexAction()
-    {    	
-        return $this->render('default/index.html.twig');
+    {
+        return $this->render('AppBundle:Default:index-salon.html.php');
+    }
+
+    /**
+     * @Route("/contacto", name="contact_form")
+     */
+    public function indexAction()
+    {
+        return $this->render('AppBundle:Default:index-salon.html.php');
     }
 
     /**
