@@ -159,7 +159,7 @@
     <div class="container">
       <div class="row">
         <h1>SALÓN DEL CARMEN</h1>
-        <h5>Raquel Españos 325 - Wilde, Buenos Aires</h5>
+        <h5>Raquel Español 325 - Wilde, Buenos Aires</h5>
         <h2>Construida en el año 1900.<br />Hoy esta casa se alquila para celebrar</h2>
         <p class="mt">
           <a href="#contact" class="btn btn-conf btn-green smoothScroll">Contacto</a>

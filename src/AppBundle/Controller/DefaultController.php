@@ -16,7 +16,15 @@ class DefaultController extends Controller
         return $this->render('AppBundle:Default:index-salon.html.php');
     }
 
-    /** descomentar
+    /**
+     * @Route("/club", name="index_salon")
+     */
+    public function clubIndexAction()
+    {
+        return $this->render('AppBundle:Default:index-club.html.php');
+    }
+
+    /**
      * @Route("/contacto", name="contact_form")
      */
     public function contactFormAction()
