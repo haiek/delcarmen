@@ -16,7 +16,7 @@ class DefaultController extends Controller
         return $this->render('AppBundle:Default:index-salon.html.php');
     }
 
-    /**
+    /** descomentar
      * @Route("/contacto", name="contact_form")
      */
     public function contactFormAction()
@@ -97,9 +97,11 @@ class DefaultController extends Controller
     {
        // Recibo el parametro email por POST
         $email = $this->get("request")->get('email');
+        $nombre = $this->get("request")->get('nombre');
+        $apellido = $this->get("request")->get('apellido');
         $listId = $this->get("request")->get('listId');
 
-        $merge_vars = array('FNAME'=>"AGUS");
+        $merge_vars = array('FNAME'=>$nombre, 'LNAME'=>$apellido);
 
         $mc = $this->get('hype_mailchimp');
         $data = $mc->getList()
@@ -109,12 +111,14 @@ class DefaultController extends Controller
                 )
                 ->subscribe($email);
 
+        var_dump($data);die;        
+
         return new Response('Contacto agregado correctamente');
 
     }    
 
     /**
-     * @Route("/campania/crear", name="new_campaign")
+     * @Route("/newsletter/new", name="new_campaign")
      */
     public function createCampaign()
     {
@@ -151,7 +155,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/miembros/elegir", name="choose_list")
+     * @Route("/newsletter", name="choose_list")
      */
     public function chooseList()
     {
