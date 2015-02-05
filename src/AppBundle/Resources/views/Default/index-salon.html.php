@@ -501,7 +501,7 @@
         <div class="row centered">
           <h2>Queres visitar el Salón? Dejanos tu contacto.</h2>
           <div class="col-md-6 col-md-offset-3 mt">
-            <form role="form" action="register.php" method="post" enctype="plain">
+            <form role="form" action="contacto" method="post" enctype="plain">
               <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">
                   <input type="text" name="name" placeholder="Nombre..." required>
@@ -509,7 +509,7 @@
                   <input type="text" name="subject" placeholder="Motivo del Contacto..." required>
                 </div>
                 <div class="col-sm-5">
-                  <textarea placeholder="Mensaje..." required></textarea>
+                  <textarea name="message" placeholder="Mensaje..." required></textarea>
                 </div>
               </div>
               <div class="row">

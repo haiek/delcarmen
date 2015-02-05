@@ -19,8 +19,42 @@ class DefaultController extends Controller
     /**
      * @Route("/contacto", name="contact_form")
      */
-    public function indexAction()
+    public function contactFormAction()
     {
+
+        $field_email = $this->get("request")->get('email');
+        $field_subject = $this->get("request")->get('subject');
+        $field_name = $this->get("request")->get('name');
+        $field_message = $this->get("request")->get('message');
+        
+
+        $mail_to = 'aj.alabarce@gmail.com';
+        $subject = '#Mensaje# '. $field_subject ;
+
+        $body_message = 'From: '. $field_name."\n";
+        $body_message .= 'E-mail: '. $field_email."\n";
+        $body_message .= 'Mensaje: '. $field_message."\n";
+
+        $mailer = $this->get('mailer');
+        $message = $mailer->createMessage()
+            ->setSubject("[Contacto]" . $field_subject)
+            ->setFrom($field_email)
+            ->setBody($body_message)
+            ->setTo($mail_to)
+        ;
+
+        $mailer->send($message);
+
+        $subscribe = $this->get("request")->get('subscribe');
+
+        if ($subscribe == "yes")
+        {
+            $mc = $this->get('hype_mailchimp');
+            $data = $mc->getList()
+                    ->setListId('a46c470bcf')
+                    ->subscribe($field_email);
+        }
+
         return $this->render('AppBundle:Default:index-salon.html.php');
     }
 
@@ -65,7 +99,7 @@ class DefaultController extends Controller
         $email = $this->get("request")->get('email');
         $listId = $this->get("request")->get('listId');
 
-       /* $merge_vars = array('FNAME'=>"AGUS");
+        $merge_vars = array('FNAME'=>"AGUS");
 
         $mc = $this->get('hype_mailchimp');
         $data = $mc->getList()
@@ -73,14 +107,8 @@ class DefaultController extends Controller
                 ->addMerge_vars(
                        $merge_vars
                 )
-                ->subscribe('a.alabarce@hotmail.com');
-*/
+                ->subscribe($email);
 
-               $mc = $this->get('hype_mailchimp');
-            $data = $mc->getList()
-                        ->memberInfo("a.alabarce@hotmail.com");
-
-        var_dump($data);die;        
         return new Response('Contacto agregado correctamente');
 
     }    
