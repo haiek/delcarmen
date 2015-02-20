@@ -376,7 +376,7 @@
 					<div class="row 150%">
 						<div class="6u">
 							<section class="highlight">
-								<a href="#" class="image featured"><img src="/web/bundles/app/salon/img/logo-club.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="/web/bundles/app/club/images/logo-club.jpg" alt="" /></a>
 								<h3><a href="#">Del Cármen Casa Club</a></h3>
 								<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 								<ul class="actions">
@@ -386,7 +386,7 @@
 						</div>
 						<div class="6u">
 							<section class="highlight">
-								<a href="#" class="image featured"><img src="/web/bundles/app/salon/img/logo-salon.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="/web/bundles/app/club/images/logo-salon.jpg" alt="" /></a>
 								<h3><a href="#">Salón del Cármen</a></h3>
 								<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 								<ul class="actions">
