@@ -271,9 +271,9 @@
           <div id="grid-container" class="cbp-l-grid-fullScreen">
              <ul>
                 <li class="cbp-item identity">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f01.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f01.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f01.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f01.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -287,9 +287,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item web-design">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f02.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f02.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f02.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f02.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -303,9 +303,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item graphic identity">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f01.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f03.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f01.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f03.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -319,9 +319,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item graphic">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f02.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f04.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f02.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f04.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -335,9 +335,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item identity">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f02.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f05.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f02.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f05.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -351,9 +351,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item graphic">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f01.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f06.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f01.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f06.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -367,9 +367,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item web-design">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f02.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f07.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f02.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f07.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -383,9 +383,9 @@
                 </li>
                 <!-- end:Item -->
                 <li class="cbp-item identity">
-                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f01.png">
+                   <a class="cbp-caption cbp-lightbox" data-title="Image" href="/web/bundles/app/salon/img/portfolio/f08.jpg">
                       <div class="cbp-caption-defaultWrap">
-                         <img src="/web/bundles/app/salon/img/portfolio/f01.png" alt="" class="img-responsive">
+                         <img src="/web/bundles/app/salon/img/portfolio/f08.jpg" alt="" class="img-responsive">
                       </div>
                       <div class="cbp-caption-activeWrap">
                          <div class="cbp-l-caption-alignCenter">
@@ -456,13 +456,13 @@
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="/web/bundles/app/salon/img/ui-05.jpg" class="img-circle aligncenter" width="120" alt="First slide">
+                    <!-- <img src="/web/bundles/app/salon/img/ui-05.jpg" class="img-circle aligncenter" width="120" alt="First slide"> -->
                     <h3>PRODUCCIONES DE MODA</h3>
                     <hr class="aligncenter">
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                   </div>
                   <div class="item">
-                    <img src="/web/bundles/app/salon/img/ui-06.jpg" class="img-circle aligncenter" width="120"  alt="Second slide">
+                    <!-- <img src="/web/bundles/app/salon/img/ui-06.jpg" class="img-circle aligncenter" width="120"  alt="Second slide"> -->
                     <h3>LOCACIÓN AUDIOVISUAL</h3>
                     <hr class="aligncenter">
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
