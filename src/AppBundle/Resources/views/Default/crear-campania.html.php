@@ -151,7 +151,7 @@
 					url: '../campania/enviar',
 					type: 'POST',
 					dataType: 'html',
-					data: {contenido: tinyMCE.activeEditor.getContent({format : 'html'}) }
+					data: {contenido: tinyMCE.activeEditor.getContent({format : 'html'}), listId: <?php echo $lista; ?> }
 				})
 					.done(function(response) {
 				        var unique_id = $.gritter.add({

@@ -94,7 +94,7 @@
           	<div class="form-panel">
 	          	<div class="row mt">
 	          		<div class="col-lg-12">
-	          			<form action="newsletter/new" method="post">
+      			<form action="newsletter/new" method="post">
 							<select name="listId" class="form-control" style="width: 300px;">
 								<option value="0">Salon</option>
 								<option value="1">Club</option>

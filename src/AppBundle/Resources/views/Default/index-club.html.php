@@ -424,7 +424,7 @@
 
 							<!-- Contact Form -->
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="contacto">
 										<div class="row 50%">
 											<div class="6u">
 												<input type="text" name="name" id="contact-name" placeholder="Nombre" required />

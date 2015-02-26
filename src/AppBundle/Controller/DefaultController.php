@@ -17,7 +17,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/club", name="index_salon")
+     * @Route("/club", name="index_club")
      */
     public function clubIndexAction()
     {
@@ -57,9 +57,13 @@ class DefaultController extends Controller
 
         if ($subscribe == "yes")
         {
+            $merge_vars = array('FNAME'=> $field_name);
             $mc = $this->get('hype_mailchimp');
             $data = $mc->getList()
                     ->setListId('a46c470bcf')
+                    ->addMerge_vars(
+                       $merge_vars
+                        )
                     ->subscribe($field_email);
         }
 
@@ -119,8 +123,6 @@ class DefaultController extends Controller
                 )
                 ->subscribe($email);
 
-        var_dump($data);die;        
-
         return new Response('Contacto agregado correctamente');
 
     }    
@@ -130,7 +132,9 @@ class DefaultController extends Controller
      */
     public function createCampaign()
     {
-        return $this->render('AppBundle:Default:crear-campania.html.php');
+        $lista = $this->get("request")->get('listId');
+
+        return $this->render('AppBundle:Default:crear-campania.html.php', array("lista" => $lista));
     }
 
     /**
@@ -139,27 +143,115 @@ class DefaultController extends Controller
     public function sendCampaign()
     {
         $contenido = $this->get("request")->get('contenido');
+        $listId = $this->get("request")->get('listId');
 
-        $mc = $this->get('hype_mailchimp');
-        $data = $mc->getCampaign()->create('regular', array(
-            'list_id' => 'a46c470bcf',
-            'subject' => 'Prueba de nueva campaign',
-            'from_email' => 'comyasejuega@gmail.com',
-            'from_name' => 'Del Carmen',
-            'to_name' => 'fans'
-                ), array(
-            'html'       => $contenido . "<img width='200' src='http://www.masiaaguasvivas.com/wp-content/themes/config/functions/thumb.php?src=http://www.masiaaguasvivas.com/img/resized_IMG_0837.jpg&h=352&w=352&zc=1'>"
-          )
-        );
+        switch ($listId) {
+            case '0':
+                # Solo envio a la lista del club
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()->create('regular', array(
+                    'list_id' => '1bc83ec652',
+                    'subject' => 'Prueba de nueva campaign CLUB',
+                    'from_email' => 'comyasejuega@gmail.com',
+                    'from_name' => 'Del Carmen',
+                    'to_name' => 'fans'
+                        ), array(
+                    'html'       => $contenido . '<div style="overflow: hidden; padding: 20px 10px; background: #0f0f0f;">
+            <div class="col-1" style="float: left; width: 50%; text-align: left;">
+                <p style="color: #FFF; font-size: 14px; line-height: 16px; margin: 0 0 20px 10px;">Salon Del Carmen<br>
+                Calle 1515, Wilde</p>
+                <div style="color: #FFF; margin: 0 0 0 10px;">
+                    <a style="text-decoration: none; color: #FFF; font-size: 14px; line-height: 16px;" href="#">Salon Del Carmen</a>&nbsp;&nbsp;&nbsp;| &nbsp;
+                    <a style="text-decoration: none; color: #FFF; font-size: 14px; line-height: 16px;" href="#">Club Del Carmen</a>
+                </div>
+            </div>
+            <div class="col-2" style="float: left; width: 50%;">
+                <ul style="padding: 0; margin: 0 10px 0 0; float: right; width: 30px;">
+                    <li style="list-style: none;"><a href="#"><img src="facebook-ico-news.jpg" alt=""></a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>'
+                  )
+                );
 
-        $cid = $data['id'];
+                $cid = $data['id'];
 
-        $mc = $this->get('hype_mailchimp');
-        $data = $mc->getCampaign()
-                ->setCi($cid)
-                ->send();
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()
+                        ->setCi($cid)
+                        ->send();
+                break;
+            
+            case '1':
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()->create('regular', array(
+                    'list_id' => 'a46c470bcf',
+                    'subject' => 'Prueba de nueva campaign SALON',
+                    'from_email' => 'comyasejuega@gmail.com',
+                    'from_name' => 'Del Carmen',
+                    'to_name' => 'fans'
+                        ), array(
+                    'html'       => $contenido . "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  )
+                );
 
-                echo $cid;die;
+                $cid = $data['id'];
+
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()
+                        ->setCi($cid)
+                        ->send();
+                break;
+
+            case '2':
+                # Envio a las dos listas
+
+                # Envio al club
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()->create('regular', array(
+                    'list_id' => '1bc83ec652',
+                    'subject' => 'Prueba de nueva campaign CLUB',
+                    'from_email' => 'comyasejuega@gmail.com',
+                    'from_name' => 'Del Carmen',
+                    'to_name' => 'fans'
+                        ), array(
+                    'html'       => $contenido . "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  )
+                );
+
+                $cid = $data['id'];
+
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()
+                        ->setCi($cid)
+                        ->send();
+
+                # Envio al salon    
+                
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()->create('regular', array(
+                    'list_id' => 'a46c470bcf',
+                    'subject' => 'Prueba de nueva campaign SALON',
+                    'from_email' => 'comyasejuega@gmail.com',
+                    'from_name' => 'Del Carmen',
+                    'to_name' => 'fans'
+                        ), array(
+                    'html'       => $contenido . "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  )
+                );
+
+                $cid = $data['id'];
+
+                $mc = $this->get('hype_mailchimp');
+                $data = $mc->getCampaign()
+                        ->setCi($cid)
+                        ->send();
+                break;    
+        }
+
+        return new Response("Newsletter enviado correctamente");
     }
 
     /**
