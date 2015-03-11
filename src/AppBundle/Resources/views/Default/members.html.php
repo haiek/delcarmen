@@ -60,7 +60,7 @@
               	  <h5 class="centered">Ale Billet</h5>
               	  	
                   <li class="mt">
-                      <a href="newsletter">
+                      <a href="../newsletter">
                           <i class="fa fa-envelope-o"></i>
                           <span>Nuevo</span>
                       </a>
@@ -72,8 +72,8 @@
                           <span>Contactos</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="miembros">Salón</a></li>
-                          <li><a  href="miembros">Club</a></li>
+                          <li><a  href="a46c470bcf">Salón</a></li>
+                          <li><a  href="1bc83ec652">Club</a></li>
                       </ul>
                   </li>
 
@@ -90,12 +90,12 @@
 
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Lista de contactos del Salón</h3>
+          	<h3><i class="fa fa-angle-right"></i> Lista de contactos</h3>
 
 			<div class="row mt">
           		<div class="col-lg-12">
                   <div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Agregar contacto a Salón</h4>
+                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Agregar contacto</h4>
                       <div class="form-horizontal style-form" method="get">
             			<div class="form-group">
 							<label class="col-sm-2 col-sm-2 control-label">Email</label>
@@ -193,10 +193,10 @@
 			if (confirm("¿Desea eliminar este contacto?"))
 			{
 				$.ajax({
-					url: 'miembros/eliminar',
+					url: '../eliminar_miembros',
 					type: 'POST',
 					dataType: 'html',
-					data: {eid: eid},
+					data: {eid: eid, lista: document.URL.split("/miembros/")[1] },
 				})
 				.done(function(response) {
 					alert(response);
@@ -213,10 +213,10 @@
 				if (testEmail.test($("#email-nuevo").val()))
 				{
 					$.ajax({
-					url: 'miembros/agregar',
+					url: '../agregar_miembros',
 					type: 'POST',
 					dataType: 'html',
-					data: { email: $("#email-nuevo").val(), nombre: $("#nombre-nuevo").val(), apellido: $("#apellido-nuevo").val() },
+					data: { email: $("#email-nuevo").val(), nombre: $("#nombre-nuevo").val(), apellido: $("#apellido-nuevo").val(), lista: document.URL.split("/miembros/")[1] },
 					})
 					.done(function(response) {
 						alert(response);

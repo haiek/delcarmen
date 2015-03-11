@@ -34,9 +34,9 @@ class DefaultController extends Controller
         $field_subject = $this->get("request")->get('subject');
         $field_name = $this->get("request")->get('name');
         $field_message = $this->get("request")->get('message');
-        
+        $from = $this->get("request")->get('from_web');
 
-        $mail_to = 'aj.alabarce@gmail.com';
+        $mail_to = 'hola@salondelcarmen.com';
         $subject = '#Mensaje# '. $field_subject ;
 
         $body_message = 'From: '. $field_name."\n";
@@ -57,26 +57,42 @@ class DefaultController extends Controller
 
         if ($subscribe == "yes")
         {
+
+            if ($from == "salon")
+            {
+                $lista = "a46c470bcf";
+            }
+            else
+            {
+                $lista = "1bc83ec652";
+            }
+
             $merge_vars = array('FNAME'=> $field_name);
             $mc = $this->get('hype_mailchimp');
             $data = $mc->getList()
-                    ->setListId('a46c470bcf')
+                    ->setListId($lista)
                     ->addMerge_vars(
                        $merge_vars
                         )
                     ->subscribe($field_email);
         }
 
-        return $this->render('AppBundle:Default:index-salon.html.php');
+        
+
+        if ($from == "salon")
+            return $this->render('AppBundle:Default:index-salon.html.php');
+        else
+            return $this->render('AppBundle:Default:index-club.html.php');
     }
 
     /**
-     * @Route("/miembros", name="list_members")
+     * @Route("/miembros/{lista}", name="list_members")
      */
-    public function listMemberAction()
+    public function listMemberAction($lista)
     {
+
     	$mc = $this->get('hype_mailchimp');
-        $data = $mc->getList()->members();
+        $data = $mc->getList()->setListId($lista)->members();
         //var_dump($data['data']);
 
         $members = $data['data'];
@@ -85,17 +101,17 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/miembros/eliminar", name="delete_member")
+     * @Route("/eliminar_miembros", name="delete_member")
      */
     public function deleteMemberAction()
     {
        // Recibo el parametro eid por POST
         $eid = $this->get("request")->get('eid');
-        $listId = $this->get("request")->get('listId');
+        $lista = $this->get("request")->get('lista');
 
         $mc = $this->get('hype_mailchimp');
         $data = $mc->getList()
-                ->setListId('a46c470bcf')
+                ->setListId($lista)
                 ->unsubscribe($eid);
 
         return new Response('Contacto eliminado correctamente');
@@ -103,21 +119,21 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/miembros/agregar", name="new_member")
+     * @Route("/agregar_miembros", name="new_member")
      */
     public function createMemberAction()
-    {
+    { 
        // Recibo el parametro email por POST
         $email = $this->get("request")->get('email');
         $nombre = $this->get("request")->get('nombre');
         $apellido = $this->get("request")->get('apellido');
-        $listId = $this->get("request")->get('listId');
+        $lista = $this->get("request")->get('lista');
 
         $merge_vars = array('FNAME'=>$nombre, 'LNAME'=>$apellido);
 
         $mc = $this->get('hype_mailchimp');
         $data = $mc->getList()
-                    ->setListId('a46c470bcf')
+                    ->setListId($lista)
                 ->addMerge_vars(
                        $merge_vars
                 )
@@ -156,18 +172,18 @@ class DefaultController extends Controller
                     'from_name' => 'Del Carmen',
                     'to_name' => 'fans'
                         ), array(
-                    'html'       => $contenido . '<div style="overflow: hidden; padding: 20px 10px; background: #0f0f0f;">
+                    'html'       => $contenido . '<div style="overflow: hidden; padding: 20px 10px; background: #0f0f0f; font-family: Helvetica; font-size: 12px">
             <div class="col-1" style="float: left; width: 50%; text-align: left;">
-                <p style="color: #FFF; font-size: 14px; line-height: 16px; margin: 0 0 20px 10px;">Salon Del Carmen<br>
+                <p style="color: #FFF; line-height: 16px; margin: 0 0 2px 10px;">Salon Del Carmen, 
                 Calle 1515, Wilde</p>
                 <div style="color: #FFF; margin: 0 0 0 10px;">
-                    <a style="text-decoration: none; color: #FFF; font-size: 14px; line-height: 16px;" href="#">Salon Del Carmen</a>&nbsp;&nbsp;&nbsp;| &nbsp;
-                    <a style="text-decoration: none; color: #FFF; font-size: 14px; line-height: 16px;" href="#">Club Del Carmen</a>
+                    <a style="text-decoration: none; color: #FFF; line-height: 16px;" href="#">Salon Del Carmen</a>&nbsp;&nbsp;&nbsp;| &nbsp;
+                    <a style="text-decoration: none; color: #FFF; line-height: 16px;" href="#">Club Del Carmen</a>
                 </div>
             </div>
             <div class="col-2" style="float: left; width: 50%;">
                 <ul style="padding: 0; margin: 0 10px 0 0; float: right; width: 30px;">
-                    <li style="list-style: none;"><a href="#"><img src="facebook-ico-news.jpg" alt=""></a></li>
+                    <li style="list-style: none;"><a href="#"><img src="http://delcarmen.local/web/bundles/app/facebook-ico-news.jpg" alt=""></a></li>
                     
                     
                 </ul>
@@ -185,6 +201,7 @@ class DefaultController extends Controller
                 break;
             
             case '1':
+                # Solo envio a la lista del salon
                 $mc = $this->get('hype_mailchimp');
                 $data = $mc->getCampaign()->create('regular', array(
                     'list_id' => 'a46c470bcf',

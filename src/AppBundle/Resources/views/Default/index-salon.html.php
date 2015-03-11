@@ -503,6 +503,7 @@
           <h2>Queres visitar el Salón? Dejanos tu contacto.</h2>
           <div class="col-md-6 col-md-offset-3 mt">
             <form role="form" action="contacto" method="post" enctype="plain">
+              <input type="hidden" name="from_web" value="salon">
               <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">
                   <input type="text" name="name" placeholder="Nombre..." required>

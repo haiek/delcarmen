@@ -72,8 +72,8 @@
                           <span>Contactos</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="miembros">Salón</a></li>
-                          <li><a  href="miembros">Club</a></li>
+                          <li><a  href="miembros/a46c470bcf">Salón</a></li>
+                          <li><a  href="miembros/1bc83ec652">Club</a></li>
                       </ul>
                   </li>
 
