@@ -420,7 +420,7 @@ textarea {
 }
 
 .section-bg-color {
-	background-color: #03C9A9;
+	background-image: url('../img/hoy-bg.jpg');
 	height: 100%;
 	padding-top: 40px;
 	padding-bottom: 80px;

@@ -193,7 +193,7 @@
               </div><!--/col-sm-4-->
               <div class="col-sm-9">
                 <h5>HORARIOS DE ATENCIÓN</h5>
-                <h3>Visitanos todos los días de<br />8:00 a 15:00</h3>
+                <h3>Martes a viernes de<br />17:00 a 20:00<br />Sábados con cita previa.</h3>
                 <p>Hoy completamente renovada, pero manteniendo la delicadeza que caracteriza su historia, Del Carmen ofrece excelencia en eventos sociales y corporativos con la calidad y compromiso que sus clientes merecen.</p>
                 <p class="mt"><a href="#speakers" class="btn btn-conf btn-clear smoothScroll">Seguir leyendo</a></p>
               </div>
@@ -214,7 +214,7 @@
           <img src="/web/bundles/app/salon/img/ui-01.jpg" height="120" class="img-circle" alt="">
         </div>
         <div class="col-md-4">
-          <h4>CONFIANZA</h4>
+          <h4>EVENTOS PRIVADOS</h4>
           <h6><tg>SERVICIO INTEGRAL PARA TODO SU EVENTO</tg></h6>
           <p>Organización integral del evento.</p>
           <p>Recepción en el lugar a cargo del personal especializado.</p>
@@ -224,7 +224,7 @@
           <img src="/web/bundles/app/salon/img/ui-02.jpg" height="120" class="img-circle" alt="">
         </div>
         <div class="col-md-4">
-          <h4>BENEFICIOS</h4>
+          <h4>SONIDO E ILUMINACIÓN</h4>
           <h6><tg>AL ELEGIR NUESTRO EXCLUSIVO LUGAR</tg></h6>
           <p>Entrada de autos directa a escalinatas de ingreso.</p>
           <p>Rampa especial de ingreso para personas discapacitadas o impedidas de subir escaleras.</p>
@@ -240,7 +240,7 @@
           <img src="/web/bundles/app/salon/img/ui-03.jpg" height="120" class="img-circle" alt="">
         </div>
         <div class="col-md-4">
-          <h4>FACILIDADES</h4>
+          <h4>AMBIENTACIÓN</h4>
           <h6><tg>PARA LA COMODIDAD DE LOS INVITADOS</tg></h6>
           <p>Toilette principal individual apto para discapacitados.</p>
           <p>Servicio de sanitarios con personal permanente de atención.</p>
@@ -254,13 +254,10 @@
           <img src="/web/bundles/app/salon/img/ui-04.jpg" height="120" class="img-circle" alt="">
         </div>
         <div class="col-md-4">
-          <h4>TECNOLOGIA</h4>
-          <h6><tg>SONIDO, ILUMINACIÓN, PROYECCIONES Y FOTOGRAFÍA</tg></h6>
-          <p>Musicalización de ambientes separados con posibilidad de graduación de música en los distintos sectores del salón.</p>
-          <p>Tecnología de punta en sonido e iluminación.</p>
-          <p>Entrevista previa con Disc Jockey para selección de música e iluminación.</p>
-          <p>Proyector en Salón Central y Salas Laterales.</p>
-          <p>Paisajes interiores y exteriores para sets fotográficos.</p>
+          <h4>GASTRONOMÍA</h4>
+          <h6><tg>EL SALÓN CUENTA CON SU PROPIO SERVICIO GASTRONÓMICO</tg></h6>
+          <p><b>Formal:</b> es la alternativa perfecta para quien esté buscando algo clásico. Incluye recepción, plato principal, postre y mesa de dulces con una amplia variedad de opciones de autor, en permanente renovación. Puede adaptarse a cualquier tipo de evento social o corporativo.</p>
+          <p><b>Informal:</b> es una alternativa más descontracturada, con islas de comidas, fingerfoods variados y platos principales que se saborean de pie sin necesidad de cuchillo. Puede adaptarse a cualquier tipo de evento social o corporativo.</p>
         </div>
       <!--/End Row of Speakers-->  
       </div><!--/row-->
@@ -457,16 +454,18 @@
                 <div class="carousel-inner">
                   <div class="item active">
                     <!-- <img src="/web/bundles/app/salon/img/ui-05.jpg" class="img-circle aligncenter" width="120" alt="First slide"> -->
-                    <h3>PRODUCCIONES DE MODA</h3>
+                    <h3>PRODUCCIONES AUDIOVISUAL</h3>
                     <hr class="aligncenter">
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                   </div>
+                  <!--
                   <div class="item">
-                    <!-- <img src="/web/bundles/app/salon/img/ui-06.jpg" class="img-circle aligncenter" width="120"  alt="Second slide"> -->
+                    <img src="/web/bundles/app/salon/img/ui-06.jpg" class="img-circle aligncenter" width="120"  alt="Second slide">
                     <h3>LOCACIÓN AUDIOVISUAL</h3>
                     <hr class="aligncenter">
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                   </div>
+                  !-->
                 </div>
               </div><!-- /.carousel -->
           </div><!--/col-lg-8 -->
